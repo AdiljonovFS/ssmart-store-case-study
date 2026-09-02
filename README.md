@@ -26,18 +26,21 @@ The company sold from a physical shop in Qarshi. Customers outside the city had 
 
 **Ustalar** — a section for booking installation and repair technicians, which matters for appliances that need mounting.
 
-**Uzbek and Russian** throughout.
-
 ---
+
+## Architecture
+
+The storefront is a React 19 SPA served by its own **Express** layer, which handles the API routes and serves the built client with compression. Keeping a small server in front of the SPA gave somewhere to put catalogue endpoints and response caching without standing up a separate service.
 
 ## Frontend work
 
-- **Product listing at scale** — category pages, search, filtering, and lazy loading of a large catalogue
+- **Product listing at scale** — category pages, search, filtering, and image-heavy grids that stay fast on mobile connections
 - **Instalment calculation** — monthly payment derived per product and rendered on every card
-- **Cart and wishlist state** — persisted across sessions
+- **Cart and wishlist state** persisted across sessions
 - **Live video integration** — the SSMART TV channel embedded in the storefront
+- **Sales dashboards** with Recharts
+- **Uzbek and Russian** via i18next with browser language detection, covering product data as well as UI strings
 - **Responsive layout** — most traffic in this market is mobile
-- **Full UZ/RU localisation**, including product data
 
 ## Design decisions worth noting
 
@@ -49,7 +52,7 @@ Badges and discounts are data-driven, so the shop's staff can run a promotion wi
 
 ## Stack
 
-`React` `i18n`
+`React 19` `Vite` `Tailwind CSS 4` `React Router 7` `Express` `i18next` `Recharts`
 
 ---
 
