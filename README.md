@@ -4,6 +4,8 @@
 
 A storefront for a physical appliance and electronics shop: full catalogue, cart and checkout, instalment pricing on every product, and a live shopping channel.
 
+![Product catalogue with instalment pricing](catalogue.png)
+
 ---
 
 ## The problem
